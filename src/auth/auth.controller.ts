@@ -13,4 +13,8 @@ export class AuthController {
       });
     else return res.send('this should be this!');
   }
+  @Get('profile')
+  async profile(): Promise<string[]> {
+    return ['another data','some data']
+  }
 }
