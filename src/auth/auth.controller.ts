@@ -1,5 +1,5 @@
 import { AuthService } from './auth.service';
-import { Post, Get, Controller, Query, HttpCode, Res } from '@nestjs/common';
+import { Post, Get, Controller, Query, HttpCode, Res, Body } from '@nestjs/common';
 @Controller('auth')
 export class AuthController {
   constructor(private authService: AuthService) {}
@@ -16,5 +16,10 @@ export class AuthController {
   @Get('profile')
   async profile(): Promise<string[]> {
     return ['another data','some data']
+  }
+  @Post('signup')
+  @HttpCode(201)
+  async signup(@Body() body) {
+    return body; 
   }
 }
