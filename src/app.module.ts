@@ -10,7 +10,6 @@ import { User } from './user/user.module';
     User,
     MongooseModule.forRoot(
       'mongodb+srv://AKASH:g1yNCB0VaZIUwzTX@cluster0.yuti9id.mongodb.net/nest?retryWrites=true&w=majority',
-      // 'mongodb://localhost:27017',
     ),
   ],
   controllers: [AppController],
